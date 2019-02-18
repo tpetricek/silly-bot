@@ -15,4 +15,9 @@ describe('Basic communication with the bot', function () {
     assert.equal(response, "I would love some tea, but they have not created one for silicon-based life forms yet.")
   });
 
+  it('should respond to comment about football', function () {
+    var query = "Did you watch the football match yesterday?"
+    var response = bot.answerQuery(query)
+    assert.equal(response, "I'm really more of a Tottenham fan.")
+  });
 });
