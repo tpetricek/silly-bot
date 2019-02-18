@@ -3,6 +3,11 @@ var bot = require('../bot');
 
 describe('Blocking offensive words from queries', function () {
 
+  it('should block sentence about exams', function () {
+    var query = "Exams are going to be awesome!"
+    assert.equal(bot.isPermitted(query), false)
+  });
+
   it('should block sentence about Brexit', function () {
     var query = "Brexit is going to be great!"
     assert.equal(bot.isPermitted(query), false)
